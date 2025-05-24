@@ -96,13 +96,13 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gray-800 text-white py-20 text-center px-4 md:px-10">
+      <section className="bg-gray-800 text-white py-10 text-center px-4 md:px-10">
         <h2 className="text-3xl font-bold mb-4">Need a Custom Quotation?</h2>
         <p className="text-lg mb-6">
           Reach out to us for tailored solutions that match your production needs.
         </p>
         <Link to="/contact">
-          <Button className="bg-white text-gray-800 hover:bg-gray-200">Contact Us</Button>
+          <Button className="bg-blue text-gray-800 hover:bg-blue">Contact Us</Button>
         </Link>
       </section>
     </div>
