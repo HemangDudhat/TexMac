@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export default function FAQ() {
   const FAQItems = [
     {
-      question: "What types of machines does Techmac Automation offer?",
+      question: "What types of machines does Texmac Automation offer?",
       answer: "We specialize in fabric cutting machines including Length Cutting Machines (LC210) and Panel Cutting Machines (PC400), along with custom automation solutions."
     },
     {

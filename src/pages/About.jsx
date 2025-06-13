@@ -9,7 +9,7 @@ export default function About() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        About Techmac Automation
+        About Texmac Automation
       </motion.h1>
 
       <motion.p

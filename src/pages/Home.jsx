@@ -7,15 +7,27 @@ export default function Home() {
     <div className="w-full">
       {/* Hero Section */}
       <section className="bg-gray-100 py-20 px-4 md:px-10">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
+
+          {/* Logo on the left */}
+          <motion.img 
+            src="/texmac logo.png" 
+            alt="Texmac Automation Logo"
+            className="w-64 md:w-80 md:ml-8 p-3"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          />
+
+          {/* Text on the right */}
           <motion.div 
-            className="md:w-1/2 mb-10 md:mb-0"
+            className="md:w-1/2 mb-10 md:mb-0 md:ml-12 p-4"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-              Smart Industrial Solutions by Techmac Automation
+              Smart Industrial Solutions by Texmac Automation
             </h1>
             <p className="text-lg text-gray-600 mb-6">
               Powering India's manufacturing with reliable, robust and advanced cutting machines.
@@ -24,14 +36,7 @@ export default function Home() {
               <Button className="text-lg px-6 py-2 rounded-xl">Explore Our Products</Button>
             </Link>
           </motion.div>
-          <motion.img 
-            src="/logo.png" 
-            alt="Techmac Automation Logo"
-            className="w-64 md:w-80"
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.5 }}
-          />
+          
         </div>
       </section>
 
@@ -40,7 +45,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl font-semibold text-gray-800 mb-4">Who We Are</h2>
           <p className="text-gray-600 text-lg mb-6">
-            At Techmac Automation, we design and deliver high-precision fabric cutting machines tailored for modern manufacturing needs. With a focus on efficiency, quality, and reliability, our machines are trusted across industries.
+            At Texmac Automation, we design and deliver high-precision fabric cutting machines tailored for modern manufacturing needs. With a focus on efficiency, quality, and reliability, our machines are trusted across industries.
           </p>
           <Link to="/about">
             <Button variant="outline">Learn More About Us</Button>
@@ -79,7 +84,7 @@ export default function Home() {
       {/* Why Choose Us */}
       <section className="py-20 px-4 md:px-10 bg-white">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-10">Why Choose Techmac?</h2>
+          <h2 className="text-3xl font-semibold text-gray-800 mb-10">Why Choose Texmac?</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {[
               "20+ Years of Expertise",

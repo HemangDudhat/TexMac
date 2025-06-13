@@ -16,9 +16,14 @@ export default function Navbar() {
 
   return (
     <header className="bg-white shadow sticky top-0 z-50">
-      <nav className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <Link to="/" className="text-xl font-bold text-gray-800">
-          Techmac Automation
+      <nav className="max-w-7xl mx-auto px-0 py-2 flex justify-between items-center">
+        <Link to="/" className="flex items-center text-xl font-bold text-gray-800">
+          <img
+            src="/texmac logo.png"
+            alt="Texmac Logo"
+            className="w-12 h-13 mr-3"
+          />
+          Texmac Automation
         </Link>
 
         {/* Desktop Nav */}
