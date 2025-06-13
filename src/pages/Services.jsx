@@ -17,7 +17,9 @@ export default function Services() {
     setOpen(false);
     setImgSrc("");
   };
-  return (
+
+
+    return (
     
     <div className="bg-white px-4 md:px-10 py-16 max-w-7xl mx-auto text-gray-800">
       <motion.h1
@@ -78,39 +80,39 @@ export default function Services() {
             </video>
 
 
-                                      {/* Image Preview Section */}
-            <div className="space-y-4 mt-6">
-              <div className="w-full max-w-md flex flex-wrap gap-4 justify-center">
-                <img
-                  src="/1.jpg"
-                  alt="Preview 1"
-                  className="w-24 h-24 object-cover rounded-lg shadow cursor-pointer"
-                  onClick={() => handleOpen("/1.jpg")}
-                />
-                <img
-                  src="/2.jpg"
-                  alt="Preview 2"
-                  className="w-24 h-24 object-cover rounded-lg shadow cursor-pointer"
-                  onClick={() => handleOpen("/2.jpg")}
-                />
-                {/* Add more images as needed */}
-              </div>
+                                       {/* Image Preview Section */}
+              <div className="space-y-4 mt-6">
+            <div className="w-full max-w-md flex flex-wrap gap-4 justify-center">
+              <img
+                src="/1.jpg"
+                alt="Preview 1"
+                className="w-24 h-24 object-cover rounded-lg shadow cursor-pointer"
+                onClick={() => handleOpen("/1.jpg")}
+              />
+              <img
+                src="/2.jpg"
+                alt="Preview 2"
+                className="w-24 h-24 object-cover rounded-lg shadow cursor-pointer"
+                onClick={() => handleOpen("/2.jpg")}
+              />
+              {/* Add more images as needed */}
             </div>
+          </div>
 
-            {/* Modal for full-size preview */}
-            {open && (
-              <div
-                className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-"
-                onClick={handleClose}
-              >
-                <img
+          {/* Modal for full-size preview */}
+          {open && (
+            <div
+              className="fixed inset-0 bg-black bg-opacity-100 flex items-center justify-center z-50"
+              onClick={handleClose}
+            >
+              <img
                   src={imgSrc}
                   alt="Full Preview"
-                  className="max-w-full max-h-full rounded-lg shadow-lg"
+                  className="max-w-xl max-h-[80vh] rounded-lg shadow-lg"
                   onClick={(e) => e.stopPropagation()}
                 />
-              </div>
-            )}
+                </div>
+          )}
           </div>
         </div>
 
@@ -164,22 +166,38 @@ export default function Services() {
           </video>
         
                              {/* Image Preview Section */}
-          <div className="space-y-4 mt-6">
+             <div className="space-y-4 mt-6">
               <div className="w-full max-w-md flex flex-wrap gap-4 justify-center">
                 <img
                   src="/5.jpg"
                   alt="Preview 1"
-                  className="w-24 h-24 object-cover rounded-lg shadow"
+                  className="w-24 h-24 object-cover rounded-lg shadow cursor-pointer"
+                  onClick={() => handleOpen("/5.jpg")}
                 />
                 <img
                   src="/6.jpg"
                   alt="Preview 2"
-                  className="w-24 h-24 object-cover rounded-lg shadow"
+                  className="w-24 h-24 object-cover rounded-lg shadow cursor-pointer"
+                  onClick={() => handleOpen("/6.jpg")}
                 />
-                
                 {/* Add more images as needed */}
               </div>
             </div>
+
+            {/* Modal for full-size preview */}
+            {open && (
+              <div
+                className="fixed inset-0 bg-black bg-opacity-100 flex items-center justify-center z-50"
+                onClick={handleClose}
+              >
+                <img
+                  src={imgSrc}
+                  alt="Full Preview"
+                  className="max-w-xl max-h-[80vh] rounded-lg shadow-lg"
+                  onClick={(e) => e.stopPropagation()}
+                />
+              </div>
+            )}
 
 
           </div>
