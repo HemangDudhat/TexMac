@@ -1,8 +1,22 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function Services() {
+
+  const [open, setOpen] = useState(false);
+  const [imgSrc, setImgSrc] = useState("");
+
+  const handleOpen = (src) => {
+    setImgSrc(src);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+    setImgSrc("");
+  };
   return (
     
     <div className="bg-white px-4 md:px-10 py-16 max-w-7xl mx-auto text-gray-800">
@@ -25,7 +39,7 @@ export default function Services() {
         animate={{ opacity: 1, y: 0 }}
         transition={{duration: 0.5 }}
       >
-        <div className="space-y-8 bg-gray-100 rounded-2xl p-8 flex flex-col md:flex-row gap-8 items-center">
+        <div className="bg-gray-100 rounded-2xl p-8 flex flex-col md:flex-row gap-8 items-start">
                                           
                                            {/* TEXT */}
           <div className="flex-1">
@@ -53,15 +67,50 @@ export default function Services() {
 
                                                {/* Video */}
   
-          <div className="flex-1 flex justify-center">
+          <div className="flex-1 flex-col items-center">
             <video
               className="rounded-xl w-full max-w-md shadow-lg"
               controls
               poster="/path/to/thumbnail.jpg"
             >
-              <source src="/sample.mp4" type="video/mp4" />
+              <source src="/preview 1.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
+
+
+                                      {/* Image Preview Section */}
+            <div className="space-y-4 mt-6">
+              <div className="w-full max-w-md flex flex-wrap gap-4 justify-center">
+                <img
+                  src="/1.jpg"
+                  alt="Preview 1"
+                  className="w-24 h-24 object-cover rounded-lg shadow cursor-pointer"
+                  onClick={() => handleOpen("/1.jpg")}
+                />
+                <img
+                  src="/2.jpg"
+                  alt="Preview 2"
+                  className="w-24 h-24 object-cover rounded-lg shadow cursor-pointer"
+                  onClick={() => handleOpen("/2.jpg")}
+                />
+                {/* Add more images as needed */}
+              </div>
+            </div>
+
+            {/* Modal for full-size preview */}
+            {open && (
+              <div
+                className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-"
+                onClick={handleClose}
+              >
+                <img
+                  src={imgSrc}
+                  alt="Full Preview"
+                  className="max-w-full max-h-full rounded-lg shadow-lg"
+                  onClick={(e) => e.stopPropagation()}
+                />
+              </div>
+            )}
           </div>
         </div>
 
@@ -76,7 +125,7 @@ export default function Services() {
           transition={{duration: 0.5 }}
       >
 
-        <div className="bg-gray-100 rounded-2xl p-8 flex flex-col md:flex-row gap-8 items-center">
+        <div className="bg-gray-100 rounded-2xl p-8 flex flex-col md:flex-row gap-8 items-start">
                                            
                                             {/* TEXT */}
         
@@ -104,66 +153,40 @@ export default function Services() {
 
                                                     {/* VIDEO */}
   
-        <div className="flex-1 flex justify-center">
+        <div className="flex-1 flex-col items-center">
           <video
             className="rounded-xl w-full max-w-md shadow-lg"
             controls
             poster="/path/to/thumbnail.jpg"
           >
-            <source src="/sample.mp4" type="video/mp4" />
+            <source src="/preview 2.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-        </div>
-      </div>
+        
+                             {/* Image Preview Section */}
+          <div className="space-y-4 mt-6">
+              <div className="w-full max-w-md flex flex-wrap gap-4 justify-center">
+                <img
+                  src="/5.jpg"
+                  alt="Preview 1"
+                  className="w-24 h-24 object-cover rounded-lg shadow"
+                />
+                <img
+                  src="/6.jpg"
+                  alt="Preview 2"
+                  className="w-24 h-24 object-cover rounded-lg shadow"
+                />
+                
+                {/* Add more images as needed */}
+              </div>
+            </div>
 
+
+          </div>
+      </div>
+      
     </motion.div>
 </div>
-
-
-{/* 
-        <div className="grid gap-10 md:grid-cols-1 max-w-7xl mx-auto">
-        {machines.map((machine, index) => (
-          <motion.div
-            key={index}
-            className="bg-gray-100 p-6 rounded-2xl shadow-md"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.2, duration: 0.5 }}
-          >
-            <h2 className="text-2xl font-semibold mb-4">{machine.name}</h2>
-           
-            <h3 className="text-lg font-medium text-gray-700 mb-2">Key Specifications:</h3>
-            <ul className="list-disc ml-6 mb-4 text-gray-600 text-sm">
-              {machine.specs.map((spec, idx) => (
-                <li key={idx}>{spec}</li>
-              ))}
-            </ul>
-
-            <h3 className="text-lg font-medium text-gray-700 mb-2">Salient Features:</h3>
-            <ul className="list-disc ml-6 mb-4 text-gray-600 text-sm">
-              {machine.features.map((feature, idx) => (
-                <li key={idx}>{feature}</li>
-              ))}
-            </ul>
-              
-             <video
-              className="rounded-xl w-full max-w-md shadow-lg justify-end mx-auto"
-              controls
-              poster="/path/to/thumbnail.jpg"
-            >
-              <source src="/path/to/product-video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-
-
-            <Link to="/contact">
-              <Button variant="default" className="mt-2">Request a Quote</Button>
-            </Link>
-          </motion.div>
-        ))}
-      </div>
- */}
-
 
 
       <motion.div
