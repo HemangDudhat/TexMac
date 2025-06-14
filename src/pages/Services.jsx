@@ -46,7 +46,7 @@ export default function Services() {
                                            {/* TEXT */}
           <div className="flex-1">
             
-            <h2 className="text-3xl font-bold mb-4">LC210 - Length cutting Machine</h2>
+            <h2 className="text-3xl font-bold mb-4">LC210 - Length Cutting Machine</h2>
             <h3 className="text-xl font-semibold mb-2">Key Specifications:</h3>
             <ul className="list-disc list-inside mb-4">
               <li>Working width: 30 cm to 210 cm</li>
