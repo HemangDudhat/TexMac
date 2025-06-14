@@ -5,11 +5,19 @@ export default function FAQ() {
   const FAQItems = [
     {
       question: "What types of machines does Texmac Automation offer?",
-      answer: "We specialize in fabric cutting machines including Length Cutting Machines (LC210) and Panel Cutting Machines (PC400), along with custom automation solutions."
+      answer: "We make machines for the home textile industry, like towel and bedsheet cutting and stitching. Our main machines include hemming machines, cross cutting machines, and blade sharpening machines."
     },
     {
-      question: "Can the machines be customized to my production needs?",
-      answer: "Yes, our engineering team provides customization options based on your material, size, and automation requirements."
+      question: "Can I get a machine made as per my need?",
+      answer: "Yes! We provide customized machines based on your production size, fabric type, and workflow."
+    },
+    {
+      question: "What fabrics are your machines suitable for?",
+      answer: "Our machines work with both terry and non-terry fabrics, like towels, bedsheets, and curtains."
+    },
+    {
+      question: "Are your machines easy to use?",
+      answer: "Yes. Our machines come with a simple control panel (HMI) and require minimal training to operate."
     },
     {
       question: "Do you provide installation and training?",
@@ -17,11 +25,23 @@ export default function FAQ() {
     },
     {
       question: "What is the typical delivery timeline?",
-      answer: "We typically deliver machines within 6 to 8 weeks after the order confirmation and payment terms are met."
+      answer: "We typically deliver machines within 1 to 4 weeks after the order confirmation and payment terms are met."
     },
     {
       question: "What support is available post-purchase?",
       answer: "We provide 1-year warranty support and prompt assistance from our service team for maintenance or troubleshooting."
+    },
+    {
+    question: "What type of stitching options do you provide?",
+    answer: "We offer both lock stitch and chain stitch options, with choices like Pegasus for high-end stitching or JIN for budget-friendly needs."
+    },
+    {
+      question: "Do your machines use PLC and electric drives?",
+      answer: "Yes, all our machines are equipped with PLC systems and electric drives for better control and efficiency."
+    },
+    {
+      question: "Do you offer support after purchase?",
+      answer: "Yes, we provide after-sales service including maintenance, technical support, and spare parts."
     }
   ];
 

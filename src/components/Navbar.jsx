@@ -9,7 +9,6 @@ export default function Navbar() {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
-    { name: "Blog", path: "/blog" },
     { name: "FAQ", path: "/FAQ" },
     { name: "Contact", path: "/contact" },
   ];
@@ -17,13 +16,14 @@ export default function Navbar() {
   return (
     <header className="bg-white shadow sticky top-0 z-50">
       <nav className="max-w-7xl mx-auto px-0 py-2 flex justify-between items-center">
-        <Link to="/" className="flex items-center text-xl font-bold text-gray-800">
+        <Link to="/" className="flex items-center text-xl font-bold text-gray-800"> 
+        {/* // make this normal text and redirect it  to home page instead of link or just change the onhover color to original color */}
           <img
             src="/texmac logo.png"
             alt="Texmac Logo"
             className="w-12 h-13 mr-3"
           />
-          Texmac Automation
+          TEXMAC AUTOMATION
         </Link>
 
         {/* Desktop Nav */}
