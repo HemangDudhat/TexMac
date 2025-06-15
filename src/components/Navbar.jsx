@@ -14,7 +14,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="bg-white shadow sticky top-0 z-50">
+    <header className="bg-white shadow sticky top-0 z-50" >
       <nav className="max-w-7xl mx-auto px-0 py-2 flex justify-between items-center">
         <Link to="/" className="flex items-center text-xl font-bold text-gray-800"> 
         {/* // make this normal text and redirect it  to home page instead of link or just change the onhover color to original color */}
@@ -23,9 +23,26 @@ export default function Navbar() {
             alt="Texmac Logo"
             className="w-12 h-13 mr-3"
           />
-          TEXMAC AUTOMATION
+      <div className="flex items-center gap-1">
+          <div
+            className="text transition-colors duration-200 cursor-pointer gap-2"
+            style={{ color: "#540000" }}
+            onMouseEnter={e => (e.currentTarget.style.color = "#7a1a1a")}
+            onMouseLeave={e => (e.currentTarget.style.color = "#540000")}
+          >
+            TEXMAC
+          </div>
+           <div
+            className="text transition-colors duration-200 cursor-pointer"
+            style={{ color: "#cca160" }}
+            onMouseEnter={e => (e.currentTarget.style.color = "#b88a4b")}
+            onMouseLeave={e => (e.currentTarget.style.color = "#cca160")}
+           >
+            AUTOMATION
+           </div>
+      </div>
         </Link>
-
+        
         {/* Desktop Nav */}
         <div className="hidden md:flex space-x-6">
           {navLinks.map(link => (

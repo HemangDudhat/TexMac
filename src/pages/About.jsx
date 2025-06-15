@@ -62,9 +62,9 @@ export default function About() {
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
           {["Integrity", "Innovation", "Customer Focus", "Reliability"].map((value, index) => (
               <div key={index} className="bg-gray-100 p-6 rounded-xl shadow-2xl transition-transform duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-3xl" 
-                             style={{
-                                backgroundImage: "url('/steel_metal.png')"
-                             }}>
+                    style={{
+                        backgroundImage: "url('/steel_metal.png')"
+                           }}>         
                 <p className="text-white font-medium">{value}</p>
               </div>
           ))}

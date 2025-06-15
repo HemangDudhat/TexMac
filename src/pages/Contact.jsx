@@ -1,17 +1,31 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { Button } from "../components/ui/button";
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
-
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
+  const formRef = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Form submitted! (Functionality to be implemented)");
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID, // replace with your EmailJS service ID
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID, // replace with your EmailJS template ID
+        formRef.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY // replace with your EmailJS public key
+      )
+      .then(
+        (result) => {
+          alert("Message sent successfully!");
+          formRef.current.reset();
+        },
+        (error) => {
+          alert("Failed to send message. Please try again later.");
+          console.error(error);
+        }
+      );
   };
 
   return (
@@ -46,6 +60,7 @@ export default function Contact() {
 
         {/* Contact Form */}
         <motion.form
+          ref={formRef}
           onSubmit={handleSubmit}
           className="bg-gray-50 p-6 rounded-2xl shadow space-y-4"
           initial={{ opacity: 0 }}
@@ -57,8 +72,6 @@ export default function Contact() {
             <label className="block text-sm font-medium mb-1">Name</label>
             <input
               name="name"
-              value={form.name}
-              onChange={handleChange}
               required
               className="w-full p-2 text-white rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Your name"
@@ -67,12 +80,10 @@ export default function Contact() {
           <div>
             <label className="block text-sm font-medium mb-1">Email</label>
             <input
-              name="email"
-              value={form.email}
-              onChange={handleChange}
+              name="mail"
               required
               type="email"
-              className="w-full p-2 text-white rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-2  text-white rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="you@example.com"
             />
           </div>
@@ -80,8 +91,6 @@ export default function Contact() {
             <label className="block text-sm font-medium mb-1">Message</label>
             <textarea
               name="message"
-              value={form.message}
-              onChange={handleChange}
               required
               className="w-full p-2 h-28 text-white rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Tell us how we can help..."

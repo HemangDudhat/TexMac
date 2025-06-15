@@ -65,7 +65,7 @@ export default function Home() {
         }}
         >
           <div className="max-w-6xl mx-auto text-center bg-white/70 rounded-2xl p-6">
-            <h2 className="text-3 xl font-semibold text-gray-800 mb-12">Our Solutions</h2>
+            <h2 className="text-3xl font-semibold text-gray-800 mb-12">Our Solutions</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
               {[
               {
@@ -83,15 +83,15 @@ export default function Home() {
                 to: "/services",
                 img: "/images/custom.jpg",
               },
-            ].map((item, idx) => (
-              <motion.div
-                key={idx}
-                whileHover={{ scale: 1.05 }}
-                className="relative p-6 rounded-2xl shadow-md transition overflow-hidden min-h-[260px] flex flex-col justify-end"
-                style={{
-                  backgroundImage: `url('${item.img}')`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
+                ].map((item, idx) => (
+                  <motion.div
+                    key={idx}
+                    whileHover={{ scale: 1.05 }}
+                    className="relative p-6 rounded-2xl shadow-md transition overflow-hidden min-h-[260px] flex flex-col justify-end"
+                    style={{
+                      backgroundImage: `url('${item.img}')`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
                 }}
               >
                 <div className="absolute inset-0 bg-black/40 rounded-2xl" />
@@ -133,7 +133,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gray-800 text-white py-10 text-center px-4 md:px-10"
+      <section className="text-white py-10 text-center px-4 md:px-10"
         style={{
           backgroundImage: "url('/black2_metal.jpg')",
           backgroundSize: "cover",
