@@ -27,7 +27,9 @@ export default function About() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
+           whileHover={{ scale: 1.05, transition: { duration: 0.15, delay: 0.05 } }}
         >
+          
           <h2 className="text-2xl font-semibold mb-3">Our Mission</h2>
           <p className="text-gray-700">
             To make textile manufacturing easier and faster by providing smart, easy-to-use machines that save time, reduce effort, and improve product quality.
@@ -40,6 +42,7 @@ export default function About() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
+          whileHover={{ scale: 1.05, transition: { duration: 0.15, delay: 0.05 } }} 
         >
           <h2 className="text-2xl font-semibold mb-3">Our Vision</h2>
           <p className="text-gray-700">
@@ -58,12 +61,12 @@ export default function About() {
         <h2 className="text-3xl font-semibold mb-6 text-center">Core Values</h2>
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
           {["Integrity", "Innovation", "Customer Focus", "Reliability"].map((value, index) => (
-            <li
-              key={index}
-              className="bg-white border border-gray-200 p-4 rounded-xl shadow-sm"
-            >
-              <span className="text-lg font-medium">{value}</span>
-            </li>
+              <div key={index} className="bg-gray-100 p-6 rounded-xl shadow-2xl transition-transform duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-3xl" 
+                             style={{
+                                backgroundImage: "url('/steel_metal.png')"
+                             }}>
+                <p className="text-white font-medium">{value}</p>
+              </div>
           ))}
         </ul>
       </motion.div>

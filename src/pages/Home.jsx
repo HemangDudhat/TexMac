@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="bg-gray-100 py-20 px-4 md:px-10">
+      <section className="w-full h-[600px] flex items-center justify-center bg-gray-100 py-16">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
 
           {/* Logo on the left */}
@@ -55,27 +55,55 @@ export default function Home() {
       </section>
 
       {/* Services Snapshot */}
-      <section className="py-20 bg-gray-100 px-4 md:px-10">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-12">Our Solutions</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {[
-              { title: "Length Cutting Machines", to: "/services" },
-              { title: "Length Hemming Machines", to: "/services" },
-              { title: "Customized Automation Machines", to: "/services" },
+      <section  
+           className="shadow- py-20 px-4 md:px-10 bg-gray-100 bg-cover bg-center"
+        style={{
+          backgroundImage: "url('/steel_metal.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          // Replace with the actual path to your provided image
+        }}
+        >
+          <div className="max-w-6xl mx-auto text-center bg-white/70 rounded-2xl p-6">
+            <h2 className="text-3 xl font-semibold text-gray-800 mb-12">Our Solutions</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+              {[
+              {
+                title: "Length Cutting Machines",
+                to: "/services",
+                img: "/images/cutting.jpg", // Replace with your image paths
+              },
+              {
+                title: "Length Hemming Machines",
+                to: "/services",
+                img: "/images/hemming.jpg",
+              },
+              {
+                title: "Customized Automation Machines",
+                to: "/services",
+                img: "/images/custom.jpg",
+              },
             ].map((item, idx) => (
               <motion.div
                 key={idx}
                 whileHover={{ scale: 1.05 }}
-                className="bg-white p-6 rounded-2xl shadow-md transition"
+                className="relative p-6 rounded-2xl shadow-md transition overflow-hidden min-h-[260px] flex flex-col justify-end"
+                style={{
+                  backgroundImage: `url('${item.img}')`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
               >
-                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  Precision-engineered machines that deliver performance and efficiency.
-                </p>
-                <Link to={item.to}>
-                  <Button size="sm">View Details</Button>
-                </Link>
+                <div className="absolute inset-0 bg-black/40 rounded-2xl" />
+                <div className="relative z-10 text-left">
+                  <h3 className="text-xl font-semibold mb-2 text-white drop-shadow">{item.title}</h3>
+                  <p className="text-white text-sm mb-4 drop-shadow">
+                    Precision-engineered machines that deliver performance and efficiency.
+                  </p>
+                  <Link to={item.to}>
+                    <Button size="sm" className="bg-white text-gray-800 hover:bg-gray-200">View Details</Button>
+                  </Link>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -93,8 +121,11 @@ export default function Home() {
               "Responsive Support Team",
               "Customized Solutions",
             ].map((reason, idx) => (
-              <div key={idx} className="bg-gray-100 p-6 rounded-xl shadow-sm">
-                <p className="text-gray-700 font-medium">{reason}</p>
+              <div key={idx} className="bg-gray-100 p-6 rounded-xl shadow-2xl transition-transform duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-3xl" 
+                             style={{
+                                backgroundImage: "url('/steel_metal.png')"
+                             }}>
+                <p className="text-white font-medium">{reason}</p>
               </div>
             ))}
           </div>
@@ -102,7 +133,12 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gray-800 text-white py-10 text-center px-4 md:px-10">
+      <section className="bg-gray-800 text-white py-10 text-center px-4 md:px-10"
+        style={{
+          backgroundImage: "url('/black2_metal.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}>
         <h2 className="text-3xl font-bold mb-4">Need a Custom Quotation?</h2>
         <p className="text-lg mb-6">
           Reach out to us for tailored solutions that match your production needs.
