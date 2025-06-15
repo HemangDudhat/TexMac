@@ -61,9 +61,9 @@ export default function Services() {
               <li>User-friendly digital HMI</li>
               <li>Precise output piling system</li>
             </ul>
-            <button className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
-              Request a Quote
-            </button>
+            <Link to="/contact">
+                <Button>Request a Quote</Button>
+            </Link>
           </div>
      
 
@@ -75,7 +75,7 @@ export default function Services() {
               controls
               poster="/path/to/thumbnail.jpg"
             >
-              <source src="/preview 1.mp4" type="video/mp4" />
+              <source src="/assets for services/preview 1.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
 
@@ -84,13 +84,13 @@ export default function Services() {
               <div className="space-y-4 mt-6">
             <div className="w-full max-w-md flex flex-wrap gap-4 justify-center">
               <img
-                src="/1.jpg"
+                src="/assets for services/1.jpg"
                 alt="Preview 1"
                 className="w-24 h-24 object-cover rounded-lg shadow cursor-pointer"
                 onClick={() => handleOpen("/1.jpg")}
               />
               <img
-                src="/2.jpg"
+                src="/assets for services/2.jpg"
                 alt="Preview 2"
                 className="w-24 h-24 object-cover rounded-lg shadow cursor-pointer"
                 onClick={() => handleOpen("/2.jpg")}
@@ -147,9 +147,9 @@ export default function Services() {
             <li>Touchscreen operation &amp; live data</li>
             <li>Expandable feeding assemblies</li>
           </ul>
-          <button className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
-            Request a Quote
-          </button>
+            <Link to="/contact">
+                <Button>Request a Quote</Button>
+            </Link>
         </div>
      
 
@@ -161,7 +161,7 @@ export default function Services() {
             controls
             poster="/path/to/thumbnail.jpg"
           >
-            <source src="/preview 2.mp4" type="video/mp4" />
+            <source src="/assets for services/preview 2.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         
@@ -169,13 +169,13 @@ export default function Services() {
              <div className="space-y-4 mt-6">
               <div className="w-full max-w-md flex flex-wrap gap-4 justify-center">
                 <img
-                  src="/5.jpg"
+                  src="/assets for services/5.jpg"
                   alt="Preview 1"
                   className="w-24 h-24 object-cover rounded-lg shadow cursor-pointer"
                   onClick={() => handleOpen("/5.jpg")}
                 />
                 <img
-                  src="/6.jpg"
+                  src="/assets for services/6.jpg"
                   alt="Preview 2"
                   className="w-24 h-24 object-cover rounded-lg shadow cursor-pointer"
                   onClick={() => handleOpen("/6.jpg")}

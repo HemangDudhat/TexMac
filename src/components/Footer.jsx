@@ -2,7 +2,12 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-white py-2 px-4">
+    <footer className="bg-gray-800 text-white py-2 px-4"
+    style={{
+          backgroundImage: "url('/black2_metal.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}>
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
 
         {/* Company Info

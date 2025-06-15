@@ -18,8 +18,7 @@ export default function About() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.6 }}
       >
-        We are a forward-thinking manufacturing company specializing in high-precision fabric cutting machines. Our solutions serve industries across India, providing automation tools that are robust, efficient, and intelligently designed.
-      </motion.p>
+        At Texmac Automation, we specialize in designing and manufacturing cutting-edge automation systems for the home textile sector. Whether you're producing towels, bedsheets, or curtains, our solutions are engineered to boost efficiency, precision, and quality in every production cycle. From customized machines to complete automation lines—we bring your concepts to life.      </motion.p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-10">
         {/* Mission */}
@@ -28,10 +27,12 @@ export default function About() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
+           whileHover={{ scale: 1.05, transition: { duration: 0.15, delay: 0.05 } }}
         >
+          
           <h2 className="text-2xl font-semibold mb-3">Our Mission</h2>
           <p className="text-gray-700">
-            To empower manufacturers with reliable, innovative, and cost-effective automation machinery that enhances productivity and precision across every application.
+            To make textile manufacturing easier and faster by providing smart, easy-to-use machines that save time, reduce effort, and improve product quality.
           </p>
         </motion.div>
 
@@ -41,10 +42,11 @@ export default function About() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
+          whileHover={{ scale: 1.05, transition: { duration: 0.15, delay: 0.05 } }} 
         >
           <h2 className="text-2xl font-semibold mb-3">Our Vision</h2>
           <p className="text-gray-700">
-            To be the leading name in industrial automation for fabric cutting and material handling, known for quality engineering and client satisfaction.
+            To help textile businesses grow by offering reliable automation solutions and becoming a trusted name in the industry, both in India and beyond.
           </p>
         </motion.div>
       </div>
@@ -59,12 +61,12 @@ export default function About() {
         <h2 className="text-3xl font-semibold mb-6 text-center">Core Values</h2>
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
           {["Integrity", "Innovation", "Customer Focus", "Reliability"].map((value, index) => (
-            <li
-              key={index}
-              className="bg-white border border-gray-200 p-4 rounded-xl shadow-sm"
-            >
-              <span className="text-lg font-medium">{value}</span>
-            </li>
+              <div key={index} className="bg-gray-100 p-6 rounded-xl shadow-2xl transition-transform duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-3xl" 
+                    style={{
+                        backgroundImage: "url('/steel_metal.png')"
+                           }}>         
+                <p className="text-white font-medium">{value}</p>
+              </div>
           ))}
         </ul>
       </motion.div>
