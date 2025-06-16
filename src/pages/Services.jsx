@@ -74,6 +74,7 @@ export default function Services() {
               className="rounded-xl w-full max-w-md shadow-lg"
               controls
               poster="/Length Hamming/2.png"
+              muted="true"
             >
               <source src="/assets for services/video/length hamming.mp4" type="video/mp4" />
               Your browser does not support the video tag.
@@ -173,6 +174,7 @@ export default function Services() {
             className="rounded-xl w-full max-w-md shadow-lg"
             controls
             poster="/Cross cutting/cc main photo.png"
+            muted="true"
           >
             <source src="/assets for services/video/cc.mp4" type="video/mp4" />
             Your browser does not support the video tag.
