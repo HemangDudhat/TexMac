@@ -46,20 +46,23 @@ export default function Services() {
                                            {/* TEXT */}
           <div className="flex-1">
             
-            <h2 className="text-3xl font-bold mb-4">LC210 - Length Cutting Machine</h2>
+            <h2 className="text-3xl font-bold mb-4">Length Hemming Machine - LH210</h2>
             <h3 className="text-xl font-semibold mb-2">Key Specifications:</h3>
             <ul className="list-disc list-inside mb-4">
-              <li>Working width: 30 cm to 210 cm</li>
-              <li>Speed: 5–30 m/min</li>
-              <li>Cutters: 4 movable heads with PLC-driven motors</li>
-              <li>Sensors: Color line sensors for precision cutting</li>
+              <li>Working width: 30 cm to 200 cm</li>
+              <li>Speed: 5–14 m/min</li>
+              <li>Suitable material –   Terry and Non-Terry Fabric </li>
+              <li>Sensors: Pile Sensor and Photocell Sensor</li>
             </ul>
             <h3 className="text-xl font-semibold mb-2">Salient Features:</h3>
             <ul className="list-disc list-inside mb-6">
-              <li>Robust structure with pneumatic control</li>
-              <li>Auto fabric feeding &amp; pulling</li>
-              <li>User-friendly digital HMI</li>
-              <li>Precise output piling system</li>
+              <li>Precision and Alignment</li>
+              <li>Integrated Cutting & Folding</li>
+              <li>User-friendly digital Human-Machine Interface(HMI)</li>
+              <li>Customization and Versatility</li>
+              <li>Integrated Cutting & Folding</li>
+              <li>Efficient Output Management</li>
+              <li>Advanced Control System</li>
             </ul>
             <Link to="/contact">
                 <Button>Request a Quote</Button>
@@ -146,20 +149,21 @@ export default function Services() {
                                             {/* TEXT */}
         
           <div className="flex-1">
-          <h2 className="text-3xl font-bold mb-4">PC400 - Panel Cutting Machine</h2>
+          <h2 className="text-3xl font-bold mb-4">Cross Cutting Mahine - CC210</h2>
           <h3 className="text-xl font-semibold mb-2">Key Specifications:</h3>
           <ul className="list-disc list-inside mb-4">
-            <li>Working width: up to 400 cm</li>
-            <li>Productivity: 15,000–20,000 m/day</li>
-            <li>Feeding: Stack / A-frame / roll options</li>
-            <li>Cutting: Longitudinal + Cross Cutting</li>
+            <li>Working width: up to 110 cm</li>
+            <li>Roller Face: 115 cm</li>
+            <li>Output Speed: 25m/min</li>
+            <li>Semi Automatic</li>
           </ul>
           <h3 className="text-xl font-semibold mb-2">Salient Features:</h3>
           <ul className="list-disc list-inside mb-6">
-            <li>Low-tension fabric compensator</li>
-            <li>Air suction stacking table</li>
-            <li>Touchscreen operation &amp; live data</li>
-            <li>Expandable feeding assemblies</li>
+            <li>Automated Fabric Handling</li>
+            <li>Robust Construction</li>
+            <li>Automated Fabric Handling</li>
+            <li>Efficient Output Piling</li>
+            <li>User-Friendly Interface</li>
           </ul>
             <Link to="/contact">
                 <Button>Request a Quote</Button>
