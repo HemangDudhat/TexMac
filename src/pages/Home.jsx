@@ -66,22 +66,22 @@ export default function Home() {
         >
           <div className="max-w-6xl mx-auto text-center bg-white/70 rounded-2xl p-6">
             <h2 className="text-3xl font-semibold text-gray-800 mb-12">Our Solutions</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {[
               {
                 title: "Length Cutting Machines",
                 to: "/services",
-                img: "/images/cutting.jpg", // Replace with your image paths
+                img: "/Cross cutting/cc main photo.png", // Replace with your image paths
               },
               {
                 title: "Length Hemming Machines",
                 to: "/services",
-                img: "/images/hemming.jpg",
+                img: "/Length Hamming/1.png",
               },
               {
                 title: "Customized Automation Machines",
                 to: "/services",
-                img: "/images/custom.jpg",
+                img: "/Length Hamming/4.png",
               },
                 ].map((item, idx) => (
                   <motion.div

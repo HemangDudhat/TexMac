@@ -84,17 +84,30 @@ export default function Services() {
               <div className="space-y-4 mt-6">
             <div className="w-full max-w-md flex flex-wrap gap-4 justify-center">
               <img
-                src="/assets for services/1.jpg"
+                src="/Length Hamming/1.png"
                 alt="Preview 1"
                 className="w-24 h-24 object-cover rounded-lg shadow cursor-pointer"
-                onClick={() => handleOpen("/1.jpg")}
+                onClick={() => handleOpen("/Length Hamming/1.png")}
               />
               <img
-                src="/assets for services/2.jpg"
+                src="/Length Hamming/2.png"
                 alt="Preview 2"
                 className="w-24 h-24 object-cover rounded-lg shadow cursor-pointer"
-                onClick={() => handleOpen("/2.jpg")}
+                onClick={() => handleOpen("/Length Hamming/2.png")}
               />
+              <img
+                src="/Length Hamming/3.png"
+                alt="Preview 2"
+                className="w-24 h-24 object-cover rounded-lg shadow cursor-pointer"
+                onClick={() => handleOpen("/Length Hamming/3.png")}
+              />
+              <img
+                src="/Length Hamming/4.png"
+                alt="Preview 2"
+                className="w-24 h-24 object-cover rounded-lg shadow cursor-pointer"
+                onClick={() => handleOpen("/Length Hamming/4.png")}
+              />
+
               {/* Add more images as needed */}
             </div>
           </div>
@@ -169,17 +182,30 @@ export default function Services() {
              <div className="space-y-4 mt-6">
               <div className="w-full max-w-md flex flex-wrap gap-4 justify-center">
                 <img
-                  src="/assets for services/5.jpg"
+                  src="/Cross cutting/cc main photo.png"
                   alt="Preview 1"
                   className="w-24 h-24 object-cover rounded-lg shadow cursor-pointer"
-                  onClick={() => handleOpen("/5.jpg")}
+                  onClick={() => handleOpen("/Cross cutting/cc main photo.png")}
                 />
                 <img
-                  src="/assets for services/6.jpg"
+                  src="/Cross cutting/cc physical photo.png"
                   alt="Preview 2"
                   className="w-24 h-24 object-cover rounded-lg shadow cursor-pointer"
-                  onClick={() => handleOpen("/6.jpg")}
+                  onClick={() => handleOpen("/Cross cutting/cc physical photo.png")}
                 />
+                <img
+                  src="/Cross cutting/cc transmission.png"
+                  alt="Preview 2"
+                  className="w-24 h-24 object-cover rounded-lg shadow cursor-pointer"
+                  onClick={() => handleOpen("/Cross cutting/cc transmission.png")}
+                />                
+                <img
+                  src="/Cross cutting/circuit.png"
+                  alt="Preview 2"
+                  className="w-24 h-24 object-cover rounded-lg shadow cursor-pointer"
+                  onClick={() => handleOpen("/Cross cutting/circuit.png")}
+                />                
+
                 {/* Add more images as needed */}
               </div>
             </div>
